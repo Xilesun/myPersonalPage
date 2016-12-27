@@ -1,0 +1,158 @@
+@font-face{
+	font-family: "Dosis-Bold";
+	src: url("fonts/Dosis-Bold.ttf");
+}
+@font-face{
+	font-family: "Dosis-Light";
+	src: url("fonts/Dosis-Light.ttf");
+}
+@font-face{
+	font-family: "Lato";
+	src: url("fonts/Lato-Regular.ttf");
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.home, .hobby, .skill, .devices, .contact{
+	width: 100％;
+	height: auto;
+	padding-bottom: 80px;
+	text-align: center;
+}
+.home{
+	margin: 50px auto;
+	padding-top: 7%;
+	padding-bottom: 250px;
+}
+.hobby, .skill, .devices, .contact{
+	margin: 0;
+	padding-top: 5%;
+}
+.hobby, .devices{
+	background-color: #eee;
+}
+h1{
+	position: relative;
+	font-size: 80px;
+	line-height: 20px;
+	font-family: "Dosis-Bold";
+}
+.title{
+	font-size: 60px;
+	font-family: "Dosis-Light";
+}
+.intro{
+	font-family: "Lato";
+	letter-spacing: 1px;
+	color: #aaa;
+	font-size: 20px;
+	text-shadow: 1px 1px 2px #eee;
+	font-weight: lighter;
+}
+.email{
+	position: relative;
+	padding: 10px 20px;
+	top: 50px;
+	font-family: "Dosis-Light";
+	letter-spacing: 2px;
+	border: 2px solid #000;
+	transition: color 0.3s ease-in;
+	transition: background-color 0.2s ease-in;
+	box-shadow: 0px 0px 3px rgba(237, 63, 124, 0.8);
+}
+.email:hover{
+	background-color: #000;
+	color: #fff;
+    cursor: pointer;
+}
+.item{
+	margin: 40px 50px 0 50px;
+	font-family: "Lato";
+	letter-spacing: 1px;
+	display: inline-block;
+}
+.item img, .hobby .item div{
+	margin-bottom: 20px;
+}
+.com{
+	background: url(imgs/hobby.png) no-repeat;
+}
+.computer, .food, .swimming-in-the-pool, .transport{ 
+	display: inline-block; 
+	background: url('imgs/hobby.png') no-repeat; 
+	overflow: hidden; 
+	text-indent: -9999px; 
+	text-align: left;
+}
+.computer{ 
+	background-position: -0px -0px; 
+	width: 128px; 
+	height: 128px; 
+}
+.food{ 
+	background-position: -128px -0px; 
+	width: 128px; 
+	height: 128px; 
+}
+.swimming-in-the-pool{ 
+	background-position: -0px -128px; 
+	width: 128px; 
+	height: 128px; 
+}
+.transport{ 
+	background-position: -128px -128px; 
+	width: 128px; 
+	height: 128px; 
+}
+.circle{
+	border: 15px solid #000;
+	width: 100px;
+	height: 20px;
+	padding: 40px 0;
+	border-radius: 50%;
+	position: relative;
+}
+.js, .html-right, .css-right, .ps, .css-left{
+	-webkit-clip-path: inset(0px 0px 0px 60px);
+	clip-path: inset(0px 0px 0px 60px);
+}
+.num{
+	position: relative;
+	top: -75px;
+}
+.html-left{
+	position: absolute;
+	-webkit-clip-path: inset(60px 0px 0px 0px);
+	clip-path: inset(60px 0px 0px 0px);
+}
+.css-left{
+	position: absolute;
+	transform: rotate(45deg);
+}
+.learn{
+	text-align: left;
+}
+.contact h1{
+	line-height: 70px;
+}
+footer{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 20px 0;
+	background-color: #333;
+	font-family: "Lato";
+	color: #fff;
+	line-height: 30px;
+}
+#backtop{
+	background: url('imgs/top.png') no-repeat 7px 7px; 
+    margin: auto;
+	position: relative;
+	height: 64px;
+	width: 64px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: rgb(237, 63, 124);
+}

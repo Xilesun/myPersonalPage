@@ -1,0 +1,289 @@
+@font-face{
+	font-family: "Dosis-Bold";
+	src: url("fonts/Dosis-Bold.ttf");
+}
+@font-face{
+	font-family: "Dosis-Light";
+	src: url("fonts/Dosis-Light.ttf");
+}
+@keyframes percent-html{
+  from { width: 0; }
+  to { width: 60%; }
+}
+@keyframes percent-css{
+  from { width: 0; }
+  to { width: 75%; }
+}
+@keyframes percent-js{
+  from { width: 0; }
+  to { width: 50%; }
+}
+@keyframes appear{
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes rotate{
+  from { transform: rotate(-360deg); }
+  to {   transform: rotate(0); }
+}
+html, body{
+  font-family: "Dosis-Light";
+  padding: 0; margin: 0;
+  height: 100%;
+}
+body{
+  background: url(imgs/bg.png);
+}
+#container{
+  height: 100%;
+  max-width: 560px;
+  margin: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #E7E7E7;
+}
+.hide{
+  overflow-y: hidden;
+}
+.nav-bar{
+  margin-left: -75%;
+  width: 75%;
+  overflow-y: scroll;
+  height: 100%;
+  float: left;
+  box-shadow: 1px 1px 1px #E7E7E7;
+}
+.show-nav-bar{
+  margin-left: 0;
+  transition: margin-left 0.3s linear;
+}
+.hide-nav-bar{
+  margin-left: -75%;
+  transition: margin-left 0.3s linear;
+}
+.show-main{
+  margin-left: 0;
+  transition: margin-left 0.3s linear;
+}
+.hide-main{
+  margin-left: calc(75% + 1px);
+  transition: margin-left 0.3s linear;
+}
+.main-blur{
+  filter: blur(1px);
+}
+.nav-top-bar{
+  padding: 17px 0;
+  color: #000;
+  font-family: "Dosis-Bold";
+  text-align: center;
+  box-shadow: 0px 1px 1px #E7E7E7;
+}
+.nav-list span{
+  display: inline-block;
+  color: #808080;
+  margin: 10px 0 10px 5px;
+}
+.nav-list ul{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav-list ul a{
+  color: #B3B3B3;
+}
+.nav-list ul li{
+  color: #B3B3B3;
+  width: calc(99.9% - 4px);
+  text-align: center;
+  padding: 5px 0;
+  margin: 5px 2px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.nav-list ul .chose{
+  background-color: #FF6666;
+  color: #fff;
+}
+.nav-footer{
+  margin-top: 40%;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.fork{
+  border: 1px solid #FF6666;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 180px;
+  margin: auto;
+}
+.fork a{
+  color: #FF6666;
+  text-decoration: none;
+}
+.copyright{
+  margin-top: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+.main{
+  width: 100%;
+}
+.top-bar{
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  flex-wrap: nowrap;
+  padding: 10px 10px 5px 10px;
+  box-shadow: 0px 1px 1px #E7E7E7;
+}
+.name{
+  white-space: nowrap;
+  margin-left: 10px;
+  align-self: center;
+}
+.small-photo img{
+  width: 35px;
+  height: 35px;
+  border-radius: 90px;
+  cursor: pointer;
+}
+.my-skills, .old-version, .home{
+  font-size: 24px;
+  width: 100%;
+}
+.basic, .tools{
+  margin: 50px 40px 50px 30px;
+}
+.basic > .item{
+  font-size: 16px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.basic > .item span{
+  display: inline-block;
+}
+.basic > .item > .name{
+  width: 100px;
+  text-align: center;
+}
+.basic > .item .percent-out{
+  width: 80%;
+  height: 15px;
+  align-self: center;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.basic > .item .percent-in{
+  height: 100%;
+  background-color: #000;
+  vertical-align: top;
+  margin: 0;
+  animation-duration: 3s;
+}
+.basic > .item .percent-in-html{
+  width: 60%;
+  animation-name: percent-html;
+}
+.basic > .item .percent-in-css{
+  width: 75%;
+  animation-name: percent-css;
+}
+.basic > .item .percent-in-js{
+  width: 50%;
+  animation-name: percent-js;
+}
+.tools > .item{
+  width: 100%;
+  white-space: normal;
+}
+.tools > .item span{
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  width: 80px;
+  text-align: center;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+.tools > .item span:nth-child(2){
+  animation-delay: 0.5s;
+}
+.tools > .item span:nth-child(3){
+  animation-delay: 1s;
+}
+.tools > .item span:nth-child(4){
+  animation-delay: 1.5s;
+}
+.tools > .item span:nth-child(5){
+  animation-delay: 2s;
+}
+.tools > .item span:nth-child(6){
+  animation-delay: 2.5s;
+}
+.appear{
+  animation-name: appear;
+}
+.addition p{
+  font-size: 16px;
+  font-family: Times New Roman;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+.old-version{
+  text-align: center;
+}
+.old-version > .item{
+  margin: 50px auto;
+  font-size: 16px;
+}
+.old-version .pic{
+  width: 70%;
+  height: auto;
+  margin: 10px auto;
+  padding: 5px;
+  border: 1px solid #BFBFBF;
+  border-radius: 3px;
+}
+.old-version .pic a > img{
+  width: 100%;
+  vertical-align: middle;
+  border: 1px solid #BFBFBF;
+  border-radius: 3px;
+}
+.home{
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.home .big-photo{
+  border-radius: 90px;
+  padding: 5px;
+  width: 86px;
+  margin: 20% auto 40px auto;
+  border: 1px solid #ccc;
+  animation-name: rotate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+}
+.home .big-photo img{
+  border-radius: 90px;
+  vertical-align: middle;
+}
+.home p{
+  line-height: 27px;
+}
+.home p > a{
+  color: #000;
+  font-family: "Dosis-Bold"
+}

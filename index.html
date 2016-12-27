@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>杨洽</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="container"
+         :class="{ 'hide': navShow }"
+    >
+      <div class="nav-bar"
+           :class="{ 'show-nav-bar': navShow, 'hide-nav-bar': !navShow }"
+      >
+        <div class="nav-top-bar">
+          <span>{{ info }}</span>
+        </div>
+        <div class="nav-list">
+          <span>menu</span>
+          <ul>
+            <li v-for="item in nav" 
+                :class="{ 'chose': chose == item.title }"
+                @click="choose(item)"
+            >{{ item.title }}</li>
+          </ul>
+          <span>contact</span>
+          <ul>
+            <li>E-mail: 2013xile@gmail.com</li>
+            <li>Github: <a href="https://github.com/Xilesun/" target="_blank">xilesun</a></li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="fork"><a href="https://github.com/Xilesun/myPersonalPage" target="_blank">Fork on Github</a></div>
+          <div class="copyright">
+              Designed by Qia Yang.<br />
+              Copyright &copy 2013-2016 imqia.me. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+      <div class="main"
+           :class="{ 'hide-main': navShow, 'show-main': !navShow , 'main-blur': navShow }"
+      >
+        <div class="top-bar">
+          <div class="small-photo"
+               @click="showNavBar"
+          >
+            <img src="imgs/photo.jpg" />
+          </div>
+          <div class="name">{{ name }}</div>
+        </div>
+        <div v-if="chose == 'Home'" class="home">
+          <div class="big-photo">
+            <img src="imgs/photo.jpg">
+          </div>
+          <p>97, Male, Guangdong Province<br />Front-End Beginner<br />Sustcer, Freshman<br /><br />
+          <a href="../blog/" target="_blank">BLOG</a></p>
+        </div>
+        <div v-if="chose == 'My Skills'" class="my-skills">
+          <div class="basic">
+            <div class="title">Basis</div>
+            <div class="item">
+              <span class="name">HTML</span>
+              <span class="percent-out">
+                <span class="percent-in percent-in-html"> </span>
+              </span>
+            </div>
+            <div class="item">
+              <span class="name">CSS</span>
+              <span class="percent-out"><span class="percent-in percent-in-css"></span></span>
+            </div>
+            <div class="item">
+              <span class="name">JavaScript</span>
+              <span class="percent-out"><span class="percent-in percent-in-js"></span></span>
+            </div>
+          </div>
+          <div class="tools">
+            <div class="title">Library & Tools</div>
+            <div class="item">
+              <span v-for="item in tools" class="appear">{{ item }}</span>
+            </div>
+          </div>
+        </div>
+        <div v-if="chose == 'Old Version'" class="old-version">
+          <div class="item">
+            <div class="pic">
+              <a href="../2016/" target="_blank"><img src="imgs/2016.jpg" /></a>
+            </div>
+            <span>2016</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+  <script src="script.js"></script>
+  </body>
+</html>
